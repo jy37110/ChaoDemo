@@ -1,0 +1,70 @@
+﻿
+
+.target{
+    width:40px;
+    height:40px;
+    margin-right:10px;
+    border-style:solid;
+    border-radius: 8px;
+    background-color:white;
+    vertical-align:middle;
+    color: black;
+    font-size: 20px;
+}
+
+.line0 {
+    margin-top: 5px;
+}
+
+
+.region1, .region2, .region3, .region4, .region5, .region6, .region7, .region8, .region9{
+    margin-right:10px;
+    margin-top:10px;
+    vertical-align:middle; 
+    width:40px;
+    height:40px;
+    border-style:solid;
+    vertical-align:middle;
+    color: white;
+    border-radius: 8px;
+    font-size: 20px;
+}
+
+.region1{
+    background-color:burlywood;
+    border-color:burlywood
+}
+.region2{
+    border-color:darkred;
+    background-color: darkred;
+}
+.region3{
+    border-color:darkgreen;
+    background-color: darkgreen;
+}
+.region4{
+    border-color:gray;
+    background-color: gray;
+}
+.region5{
+    border-color:darkgoldenrod;
+    background-color: darkgoldenrod;
+}
+.region6{
+    border-color:mediumslateblue;
+    background-color: mediumslateblue;
+}
+.region7{
+    border-color:steelblue;
+    background-color: steelblue;
+}
+.region8{
+    border-color:lightseagreen;
+    background-color: lightseagreen;
+}
+.region9{
+    border-color:darkolivegreen;
+    background-color: darkolivegreen;
+}
+
+

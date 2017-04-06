@@ -167,19 +167,21 @@ function changeValue(val) {
         selected = false;
         undoId.push(selectedId);
         selectedId = null;
-        if (difficulty === "Easy") {
-            score += 100;
-        } else if (difficulty === "Normal") {
-            score += 200;
-        } else if (difficulty === "Hard") {
-            score += 300;
-        }
-        document.getElementById("gameScore").innerHTML = "Score: " + score;
         var boardStr = getBoardStr();
         verifyBoard(boardStr);
     }
 }
 
+function gainScore() {
+    if (difficulty === "Easy") {
+        score += 100;
+    } else if (difficulty === "Normal") {
+        score += 200;
+    } else if (difficulty === "Hard") {
+        score += 300;
+    }
+    document.getElementById("gameScore").innerHTML = "Score: " + score;
+}
 
 function verifyBoard(boardStr) {
     var xmlhttp;
@@ -195,7 +197,10 @@ function verifyBoard(boardStr) {
             if (stateCode === "2") {
                 gameover();
             } else if (stateCode === "3") {
+                gainScore();
                 win();
+            } else if (stateCode === "1") {
+                gainScore();
             }
         }
     }

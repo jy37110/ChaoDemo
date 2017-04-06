@@ -66,6 +66,6 @@ D:\MyCode\MVC4\MVCPracticeProject\MVCPracticeProject\bin\Microsoft.Owin.Security
 D:\MyCode\MVC4\MVCPracticeProject\MVCPracticeProject\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 D:\MyCode\MVC4\MVCPracticeProject\MVCPracticeProject\obj\Debug\MVCPracticeProject.dll
 D:\MyCode\MVC4\MVCPracticeProject\MVCPracticeProject\obj\Debug\MVCPracticeProject.pdb
-D:\MyCode\MVC4\MVCPracticeProject\MVCPracticeProject\obj\Debug\MVCPracticeProject.csprojResolveAssemblyReference.cache
 D:\MyCode\MVC4\MVCPracticeProject\MVCPracticeProject\obj\Debug\MVCPracticeProject.Migrations.contextChanged.resources
 D:\MyCode\MVC4\MVCPracticeProject\MVCPracticeProject\obj\Debug\MVCPracticeProject.csproj.GenerateResource.Cache
+D:\MyCode\MVC4\MVCPracticeProject\MVCPracticeProject\obj\Debug\MVCPracticeProject.csprojResolveAssemblyReference.cache

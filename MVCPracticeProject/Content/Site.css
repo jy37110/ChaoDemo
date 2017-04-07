@@ -22,3 +22,9 @@ select,
 textarea {
     max-width: 280px;
 }
+
+#demoBtn {
+    height: 40px;
+    width: 120px;
+    font-size: 20px;
+}

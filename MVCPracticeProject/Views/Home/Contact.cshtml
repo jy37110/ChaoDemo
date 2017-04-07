@@ -1,17 +1,33 @@
-﻿@{
+﻿@using System.Web.UI.WebControls
+@model MVCPracticeProject.Models.Message
+
+@{
     ViewBag.Title = "Contact";
 }
-<h2>@ViewBag.Title.</h2>
+
+@*<h2>@ViewBag.Title.</h2>*@
+
 <h3>@ViewBag.Message</h3>
 
 <address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
+    jy37110@gmail.com<br />
+    <abbr title="Phone">Phone:</abbr>
+    0210384482
 </address>
 
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+@using (Html.BeginForm("Contact", "Home"))
+{
+    <form>
+        <div class="form-group">
+            @Html.LabelFor(m => m.message,"Leave a message:", new {style="font-weight:normal"})
+            @Html.TextAreaFor(m => m.message, new { style="margin:0px; width:800px; max-width:45%;", rows = "8",  @class = "form-control", PlaceHolder= "Please write down your contact number if you want me to contact you." })
+            @Html.ValidationMessageFor(m => m.message)
+        </div>
+        <button id ="submitBtn" type="submit" class="btn btn-primary">Submit »</button>
+    </form>
+}
+
+    <address style="margin-top: 30px">
+        <strong>Support:</strong>   <a href="mailto:jy37110@gmail.com">jy37110@gmail.com</a><br />
+    </address>
+

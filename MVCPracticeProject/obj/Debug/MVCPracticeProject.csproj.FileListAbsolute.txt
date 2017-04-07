@@ -69,3 +69,7 @@ D:\MyCode\MVC4\MVCPracticeProject\MVCPracticeProject\obj\Debug\MVCPracticeProjec
 D:\MyCode\MVC4\MVCPracticeProject\MVCPracticeProject\obj\Debug\MVCPracticeProject.Migrations.contextChanged.resources
 D:\MyCode\MVC4\MVCPracticeProject\MVCPracticeProject\obj\Debug\MVCPracticeProject.csproj.GenerateResource.Cache
 D:\MyCode\MVC4\MVCPracticeProject\MVCPracticeProject\obj\Debug\MVCPracticeProject.csprojResolveAssemblyReference.cache
+D:\MyCode\MVC4\MVCPracticeProject\MVCPracticeProject\obj\Debug\MVCPracticeProject.Migrations.addMessageClass.resources
+D:\MyCode\MVC4\MVCPracticeProject\MVCPracticeProject\obj\Debug\MVCPracticeProject.Migrations.addAnnotation.resources
+D:\MyCode\MVC4\MVCPracticeProject\MVCPracticeProject\obj\Debug\MVCPracticeProject.Migrations.addLength.resources
+D:\MyCode\MVC4\MVCPracticeProject\MVCPracticeProject\obj\Debug\MVCPracticeProject.Migrations.resetLength.resources

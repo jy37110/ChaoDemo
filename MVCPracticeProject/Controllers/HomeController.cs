@@ -9,6 +9,13 @@ namespace MVCPracticeProject.Controllers
 {
     public class HomeController : Controller
     {
+        private ApplicationDbContext db;
+
+        public HomeController()
+        {
+            db = new ApplicationDbContext();;
+        }
+
         public ActionResult Index()
         {
             return View();
@@ -18,16 +25,31 @@ namespace MVCPracticeProject.Controllers
         {
             ViewBag.Message = "Your application description page.";
             var model = new AboutModels();
-            model.Name = "Jesse";
-            model.Description = "Some words to describe me";
+            model.Name = "Jesse (Chao Gong)";
+            model.Description = "Some words to describe me. To be continue...";
             return View(model);
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "You can find me by the follows:";
+            var model = new Message();
 
-            return View();
+            return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult Contact(Message model)
+        {
+            if (!ModelState.IsValid)
+            {
+                var passInModel = new Message();
+                return View("Contact", passInModel);
+            }
+
+            db.Messagese.Add(model);
+            db.SaveChanges();
+            return RedirectToAction("Index", "Home");
         }
     }
 }

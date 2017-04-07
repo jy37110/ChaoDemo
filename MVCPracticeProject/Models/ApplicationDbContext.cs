@@ -10,6 +10,7 @@ namespace MVCPracticeProject.Models
         public DbSet<Category> Categories { get; set; }
         public DbSet<Storage> Storages { get; set; }
         public DbSet<Branch> Branches { get; set; }
+        public DbSet<Message> Messagese { get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)

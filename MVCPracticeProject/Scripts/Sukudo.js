@@ -60,7 +60,7 @@ function undo() {
     } else if (undoId.length <= 0) {
         displayMsg("You have nothing to undo.");
     } else {
-        displayMsg("You will need to spend 500 score to perform a undo option.");
+        displayMsg("You will need to spend 500 points to perform a undo option.");
     }
 }
 

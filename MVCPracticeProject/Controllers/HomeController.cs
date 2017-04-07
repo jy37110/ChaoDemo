@@ -26,13 +26,13 @@ namespace MVCPracticeProject.Controllers
             ViewBag.Message = "Your application description page.";
             var model = new AboutModels();
             model.Name = "Jesse (Chao Gong)";
-            model.Description = "Some words to describe me. To be continue...";
+            model.Description = "Some words to describe me. To be continued...";
             return View(model);
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "You can find me by the follows:";
+            ViewBag.Message = "You can find me at the following:";
             var model = new Message();
 
             return View(model);
@@ -43,12 +43,14 @@ namespace MVCPracticeProject.Controllers
         {
             if (!ModelState.IsValid)
             {
+                ViewBag.Message = "You can find me at the following:";
                 var passInModel = new Message();
                 return View("Contact", passInModel);
             }
 
             db.Messagese.Add(model);
             db.SaveChanges();
+
             return RedirectToAction("Index", "Home");
         }
     }

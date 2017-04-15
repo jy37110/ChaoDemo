@@ -26,7 +26,7 @@ namespace MVCPracticeProject.Controllers
             ViewBag.Message = "Your application description page.";
             var model = new AboutModels();
             model.Name = "Jesse (Chao Gong)";
-            model.Description = "Some words to describe me. To be continued...";
+            model.Description = "Here is my CV...";
             return View(model);
         }
 
@@ -51,7 +51,8 @@ namespace MVCPracticeProject.Controllers
             db.Messagese.Add(model);
             db.SaveChanges();
 
-            return RedirectToAction("Index", "Home");
+            TempData["message"] = "Thanks for your message.";
+            return RedirectToAction("Contact", "Home");
         }
     }
 }

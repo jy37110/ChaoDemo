@@ -28,3 +28,10 @@ textarea {
     width: 120px;
     font-size: 20px;
 }
+
+#cv {
+    height: 1754px;
+    width: 1240px;
+    text-align: left;
+    border: 2px solid;
+}

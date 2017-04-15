@@ -199,6 +199,10 @@
     <Compile Include="Migrations\201704070335457_resetLength.Designer.cs">
       <DependentUpon>201704070335457_resetLength.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201704151158491_addMoreAnnotations.cs" />
+    <Compile Include="Migrations\201704151158491_addMoreAnnotations.Designer.cs">
+      <DependentUpon>201704151158491_addMoreAnnotations.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AboutModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -332,6 +336,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201704070335457_resetLength.resx">
       <DependentUpon>201704070335457_resetLength.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704151158491_addMoreAnnotations.resx">
+      <DependentUpon>201704151158491_addMoreAnnotations.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

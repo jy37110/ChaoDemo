@@ -12,7 +12,7 @@
 <address>
     E-mail: &nbsp;jy37110@gmail.com<br />
     <abbr title="Phone">Phone:</abbr>
-    0210384482
+    +64 21 038 4482
 </address>
 
 @using (Html.BeginForm("Contact", "Home"))
@@ -27,7 +27,12 @@
     </form>
 }
 
-    <address style="margin-top: 30px">
+@if (TempData["message"] == "Thanks for your message.")
+{
+    <span>Thanks for your message.</span> //Never displayed
+}
+
+<address style="margin-top: 30px">
         <strong>Support:</strong>   <a href="mailto:jy37110@gmail.com">jy37110@gmail.com</a><br />
     </address>
 

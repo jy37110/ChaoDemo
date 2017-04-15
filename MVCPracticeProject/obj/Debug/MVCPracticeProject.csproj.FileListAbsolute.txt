@@ -73,3 +73,4 @@ D:\MyCode\MVC4\MVCPracticeProject\MVCPracticeProject\obj\Debug\MVCPracticeProjec
 D:\MyCode\MVC4\MVCPracticeProject\MVCPracticeProject\obj\Debug\MVCPracticeProject.Migrations.addAnnotation.resources
 D:\MyCode\MVC4\MVCPracticeProject\MVCPracticeProject\obj\Debug\MVCPracticeProject.Migrations.addLength.resources
 D:\MyCode\MVC4\MVCPracticeProject\MVCPracticeProject\obj\Debug\MVCPracticeProject.Migrations.resetLength.resources
+D:\MyCode\MVC4\MVCPracticeProject\MVCPracticeProject\obj\Debug\MVCPracticeProject.Migrations.addMoreAnnotations.resources

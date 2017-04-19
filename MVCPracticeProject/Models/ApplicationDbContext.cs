@@ -1,5 +1,6 @@
 using System.Data.Entity;
 using Microsoft.AspNet.Identity.EntityFramework;
+using MVCPracticeProject.Models.FoodOrder;
 using MVCPracticeProject.Models.Tables;
 
 namespace MVCPracticeProject.Models
@@ -11,6 +12,8 @@ namespace MVCPracticeProject.Models
         public DbSet<Storage> Storages { get; set; }
         public DbSet<Branch> Branches { get; set; }
         public DbSet<Message> Messagese { get; set; }
+        public DbSet<Dish> Dishes { get; set; }
+        public DbSet<Order> Orders { get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)

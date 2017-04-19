@@ -13,6 +13,7 @@ namespace MVCPracticeProject.Models.Tables
         [StringLength(100)]
         public string Name { get; set; }
         [Required]
+        [Range(0, float.MaxValue, ErrorMessage = "Please enter a value bigger than 0")]
         public float Price { get; set; }
         [Required]
         public int CategoryId { get; set; }

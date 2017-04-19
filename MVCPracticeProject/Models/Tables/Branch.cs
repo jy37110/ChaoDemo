@@ -12,6 +12,7 @@ namespace MVCPracticeProject.Models.Tables
         [StringLength(255)]
         public string Address { get; set; }
         public string Hours { get; set; }
+        [Required]
         public bool IsAgency { get; set; }
         public virtual List<Storage> Storages { get; set; }
         public virtual List<Product> Products { get; set; }

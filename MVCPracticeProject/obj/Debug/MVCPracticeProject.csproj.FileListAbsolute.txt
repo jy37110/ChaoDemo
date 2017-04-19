@@ -74,3 +74,13 @@ D:\MyCode\MVC4\MVCPracticeProject\MVCPracticeProject\obj\Debug\MVCPracticeProjec
 D:\MyCode\MVC4\MVCPracticeProject\MVCPracticeProject\obj\Debug\MVCPracticeProject.Migrations.addLength.resources
 D:\MyCode\MVC4\MVCPracticeProject\MVCPracticeProject\obj\Debug\MVCPracticeProject.Migrations.resetLength.resources
 D:\MyCode\MVC4\MVCPracticeProject\MVCPracticeProject\obj\Debug\MVCPracticeProject.Migrations.addMoreAnnotations.resources
+D:\MyCode\MVC4\MVCPracticeProject\MVCPracticeProject\obj\Debug\MVCPracticeProject.Migrations.addDishAndOrderClass.resources
+D:\MyCode\MVC4\MVCPracticeProject\MVCPracticeProject\obj\Debug\MVCPracticeProject.Migrations.structureChanged.resources
+D:\MyCode\MVC4\MVCPracticeProject\MVCPracticeProject\obj\Debug\MVCPracticeProject.Migrations.changPriceFromFloatToDouble.resources
+D:\MyCode\MVC4\MVCPracticeProject\MVCPracticeProject\obj\Debug\MVCPracticeProject.Migrations.useMoneyType.resources
+D:\MyCode\MVC4\MVCPracticeProject\MVCPracticeProject\obj\Debug\MVCPracticeProject.Migrations.changOrderItemClass.resources
+D:\MyCode\MVC4\MVCPracticeProject\MVCPracticeProject\obj\Debug\MVCPracticeProject.Migrations.changeOrderTableUsePhone.resources
+D:\MyCode\MVC4\MVCPracticeProject\MVCPracticeProject\obj\Debug\MVCPracticeProject.Migrations.changeSubtotalToDecimal.resources
+D:\MyCode\MVC4\MVCPracticeProject\MVCPracticeProject\obj\Debug\MVCPracticeProject.Migrations.addNameToApplicationUser.resources
+D:\MyCode\MVC4\MVCPracticeProject\MVCPracticeProject\obj\Debug\MVCPracticeProject.Migrations.addValidatorInOrderTalbe.resources
+D:\MyCode\MVC4\MVCPracticeProject\MVCPracticeProject\obj\Debug\MVCPracticeProject.Migrations.addUserIdInOrder.resources

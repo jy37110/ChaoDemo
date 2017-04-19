@@ -1,4 +1,5 @@
 using MVCPracticeProject.Models;
+using MVCPracticeProject.Models.FoodOrder;
 using MVCPracticeProject.Models.Tables;
 
 namespace MVCPracticeProject.Migrations
@@ -35,6 +36,10 @@ namespace MVCPracticeProject.Migrations
             context.Database.ExecuteSqlCommand("delete from dbo.Categories");
             context.Database.ExecuteSqlCommand("delete from dbo.Storages");
             context.Database.ExecuteSqlCommand("delete from dbo.Branches");
+            context.Database.ExecuteSqlCommand("delete from dbo.Dishes");
+            context.Database.ExecuteSqlCommand("delete from dbo.Orders");
+            context.Database.ExecuteSqlCommand("delete from dbo.OrderItems");
+
 
             context.Categories.AddOrUpdate(
                 c => c.Name,
@@ -89,6 +94,35 @@ namespace MVCPracticeProject.Migrations
                 new Storage { Id = 26, ProductId = 9, BranchId = 2, StockQty = 0 },
                 new Storage { Id = 27, ProductId = 9, BranchId = 3, StockQty = 0 }
                 );
+
+            context.Dishes.AddOrUpdate(
+                c => c.Name,
+                new Dish { Name = "Catch of the day", Details = "Herb ristto, spanner crab, dried tomatoes, mustard leaves lemon oil.", Price = 44.00m, Type = "Main Course"},
+                new Dish { Name = "Pan-fried snapper", Details = "Chilli coconut broth crispy prawn, vietnamese mint salad.", Price = 42.00m, Type = "Main Course" },
+                new Dish { Name = "Long line tarakihi", Details = "Beer battered, duck fat chips, warm pea salad, tartare, lemon, Sails ketchup.", Price = 37.00m, Type = "Main Course" },
+                new Dish { Name = "Walewska", Details = "Steamed catch, mornay, prawns, truffle dressing, spinach, duchess potatoes.", Price = 49.00m, Type = "Main Course" },
+                new Dish { Name = "Roast duck breast", Details = "Confit duck leg, pink peppercorn crust, kumara mash, beetroot, cherry gastrique and salmis sauce.", Price = 44.00m, Type = "Main Course" },
+                new Dish { Name = "Dauphinoise potatoes", Details = "", Price = 10.00m, Type = "Sides" },
+                new Dish { Name = "Broccolini", Details = "Golden raisin, almond butter.", Price = 10.00m, Type = "Sides" },
+                new Dish { Name = "Fries", Details = "Truffle oil, parnesan.", Price = 10.00m, Type = "Sides" },
+                new Dish { Name = "Salad", Details = "Mixed leaves, pear, walnut.", Price = 10.00m, Type = "Sides" },
+                new Dish { Name = "Sorbets & ice creams", Details = "Sugar coated pumpkin seeds, caramelized white chocolate.", Price = 15.00m, Type = "Desserts" },
+                new Dish { Name = "Pavlova", Details = "Passion fruit curd, whipped cream.", Price = 15.00m, Type = "Desserts" },
+                new Dish { Name = "Red gold", Details = "Textures of berry, sorbet, spicy caramel top.", Price = 16.00m, Type = "Desserts" },
+                new Dish { Name = "Sails donuts", Details = "Apples, rum and cranberry ice cream.", Price = 16.00m, Type = "Desserts" },
+                new Dish { Name = "Flat white", Details = "", Price = 5.00m, Type = "Coffee" },
+                new Dish { Name = "Latte", Details = "", Price = 5.00m, Type = "Coffee" },
+                new Dish { Name = "Cappuccino", Details = "", Price = 5.00m, Type = "Coffee" },
+                new Dish { Name = "Long black", Details = "", Price = 5.00m, Type = "Coffee" },
+                new Dish { Name = "Short black", Details = "", Price = 5.00m, Type = "Coffee" },
+                new Dish { Name = "Macchiato", Details = "", Price = 5.00m, Type = "Coffee" },
+                new Dish { Name = "Ristretto", Details = "", Price = 5.00m, Type = "Coffee" },
+                new Dish { Name = "English breakfast", Details = "", Price = 5.00m, Type = "Tea" },
+                new Dish { Name = "Aromatic earl grey", Details = "", Price = 5.00m, Type = "Tea" },
+                new Dish { Name = "Pure green tea", Details = "", Price = 5.00m, Type = "Tea" },
+                new Dish { Name = "Gentle chamomile", Details = "", Price = 5.00m, Type = "Tea" },
+                new Dish { Name = "Pure peppermint", Details = "", Price = 5.00m, Type = "Tea" }
+            );
         }
     }
 }

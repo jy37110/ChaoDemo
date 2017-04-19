@@ -1,0 +1,65 @@
+﻿@using System.Collections
+@model IEnumerable<MVCPracticeProject.Models.FoodOrder.Dish>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 style="margin-top: 30px; margin-bottom: 20px;">XXX Restaurant Menu</h2>
+
+<div id ="mainDiv">
+    <div id="leftDiv" class="panel panel-default">
+        <!-- Default panel contents -->
+        
+        @{
+            string itemType = "";
+            int index = 0;
+            foreach (var item in Model)
+            {
+                string namnId = "n" + index;
+                string priceId = "p" + index;
+                if (itemType != item.Type)
+                {
+                    itemType = item.Type;
+                    <div class="panel-heading" style="background-color: rgb(68,157,68)">
+                        <h4 style="font-weight: bold; margin: 5px; color: white">
+                            <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+                            @itemType
+                        </h4>
+                    </div>
+                }
+                <li class="list-group-item myMenu">
+                    <h4 id=@namnId style="float: left; margin: 5px; font-weight: bold; color: rgb(60, 60, 60);">@Html.DisplayFor(modelItem => item.Name)</h4>
+                    
+                    <h4 style="margin: 5px; float: right" class="price">
+                        <button class="btn btn-default addBtn" type="button" onclick="addItem(this.value)" value=@index>+</button>
+                    </h4>
+                    <h4 id=@priceId style="margin-right: 5px; margin-top: 13px; float: right; color: rgb(60, 60, 60);" class="price">
+                        @Html.DisplayFor(modelItem => item.Price)
+                    </h4>
+                    <h4 style="margin-top: 13px; float: right; color: rgb(60, 60, 60);" class="price">$</h4>
+                    
+                    <h4 style="clear: both; margin: 5px; color: rgb(120, 120, 120);">@Html.DisplayFor(modelItem => item.Details)</h4>
+                </li>
+                index++;
+            }
+        }
+    </div>
+    <div id="rightDiv" class="jumbotron">
+        <h2 style="margin-top: 0px;">Your Order</h2>
+        <hr/>
+        <table id="orderItem">
+        </table>
+        <hr/>
+        <div>
+            <p style="float: left; font-size: 18px;">Total</p>
+            <p id="totalPrice" style="text-align: right; margin-right: 55px; font-size: 18px;">0</p>
+        </div>
+        
+        <p><a id="placeOrderBtn" style="clear: both; width: 100%;" class="btn btn-success btn-lg" href="#" role="button" onclick="postOrders()">Place my order »</a></p>
+    </div>
+</div>
+<br style="clear: both"/>
+
+<script type="text/javascript" src="~/Scripts/FoodOrder.js"></script>

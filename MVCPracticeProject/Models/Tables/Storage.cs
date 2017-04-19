@@ -10,6 +10,7 @@ namespace MVCPracticeProject.Models.Tables
         public virtual Product Product { get; set; }
         public virtual Branch Branch { get; set; }
         [Required]
+        [Range(0, int.MaxValue, ErrorMessage = "StockQty must be a positive number")]
         public int StockQty { get; set; }
     }
 }

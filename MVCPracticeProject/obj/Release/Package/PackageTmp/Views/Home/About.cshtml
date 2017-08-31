@@ -1,0 +1,12 @@
+﻿@model MVCPracticeProject.Models.AboutModels
+@{
+    ViewBag.Title = "About";
+}
+@*<h2>@ViewBag.Title.</h2>*@
+<h3>@Model.Name</h3>
+
+<p>@Model.Description</p>
+<div style="float:left">
+    
+</div>
+<img id="cv" src="@Url.Content("~/Content/CV.jpg")" alt="IMAGES" />

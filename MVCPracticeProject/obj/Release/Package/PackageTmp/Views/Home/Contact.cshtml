@@ -1,0 +1,38 @@
+﻿@using System.Web.UI.WebControls
+@model MVCPracticeProject.Models.Message
+
+@{
+    ViewBag.Title = "Contact";
+}
+
+@*<h2>@ViewBag.Title.</h2>*@
+
+<h3>@ViewBag.Message</h3>
+<hr />
+<address>
+    E-mail: &nbsp;jy37110@gmail.com<br />
+    <abbr title="Phone">Phone:</abbr>
+    +64 21 038 4482
+</address>
+
+@using (Html.BeginForm("Contact", "Home"))
+{
+    <form>
+        <div class="form-group">
+            @Html.LabelFor(m => m.message,"Leave a message:", new {style="font-weight:normal"})
+            @Html.TextAreaFor(m => m.message, new { style="margin:0px; width:800px; max-width:45%;", rows = "8",  @class = "form-control", PlaceHolder= "Please write down your contact number if you want me to contact you." })
+            @Html.ValidationMessageFor(m => m.message)
+        </div>
+        <button id ="submitBtn" type="submit" class="btn btn-primary">Submit »</button>
+    </form>
+}
+
+@if (TempData["message"] == "Thanks for your message.")
+{
+    <span>Thanks for your message.</span> //Never displayed
+}
+
+<address style="margin-top: 30px">
+        <strong>Support:</strong>   <a href="mailto:jy37110@gmail.com">jy37110@gmail.com</a><br />
+    </address>
+

@@ -1,0 +1,65 @@
+﻿@model IEnumerable<MVCPracticeProject.Models.FoodOrder.Order>
+
+@{
+    ViewBag.Title = "MyOrder";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>My Order</h2>
+
+@{
+    if (Model.Count() <= 0)
+    {
+        <p>There is no order found for you.</p>
+    }
+}
+
+@foreach (var item in Model) {
+
+    <div class="jumbotron">
+        <h4>@Html.DisplayNameFor(model => model.User.Name) : @Html.DisplayFor(modelItem => item.User.Name)</h4>
+        <h4>@Html.DisplayNameFor(model => model.User.Email) : @Html.DisplayFor(modelItem => item.User.Email)</h4>
+        <h4>@Html.DisplayNameFor(model => model.PhoneNumber) : @Html.DisplayFor(modelItem => item.PhoneNumber)</h4>
+        <h4>@Html.DisplayNameFor(model => model.Address) : @Html.DisplayFor(modelItem => item.Address)</h4>
+        <h4>@Html.DisplayNameFor(model => model.Status) : @Html.DisplayFor(modelItem => item.Status)</h4>
+        <h4>@Html.DisplayNameFor(model => model.Subtotal) : @Html.DisplayFor(modelItem => item.Subtotal)</h4>
+        <h4 style="color: rgb(236,151,31)">Important Notice: Here is just the demo. Your order will not be delivered to you!</h4>
+        
+        @using (Html.BeginForm("MyOrder", "FoodOrder"))
+        {
+            @Html.Hidden("id", item.Id);
+            <input class="btn btn-primary" type="submit" value="Cancel"/>
+        }
+    </div>
+
+    <table class="table table-striped">
+        <tr>
+            <th>
+                Dish Name
+            </th>
+            <th>
+                Price
+            </th>
+            <th>
+                Quantity
+            </th>
+        </tr>
+
+        @foreach (var orderItem in item.OrderList)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => orderItem.DishName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => orderItem.Price)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => orderItem.Quantity)
+                </td>
+            </tr>
+        }
+    </table>
+    }
+
+

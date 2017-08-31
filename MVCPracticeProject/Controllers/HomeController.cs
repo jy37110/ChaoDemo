@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Microsoft.AspNet.Identity;
 
 namespace MVCPracticeProject.Controllers
 {
@@ -53,6 +54,21 @@ namespace MVCPracticeProject.Controllers
 
             TempData["message"] = "Thanks for your message.";
             return RedirectToAction("Contact", "Home");
+        }
+
+        [HttpPost]
+        public ActionResult FlowStatistics(string msg)
+        {
+            var userId = User.Identity.GetUserId();
+            if (msg == "flow" && userId != "41f16096-f814-446d-a703-43dbefdfd7e5")
+            {
+                var flowModel = new Flow();
+                DateTime now = DateTime.Now;
+                flowModel.DateTime = now;
+                db.Flows.Add(flowModel);
+                db.SaveChanges();
+            }
+            return null;
         }
     }
 }

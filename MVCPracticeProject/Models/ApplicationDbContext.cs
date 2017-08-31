@@ -14,6 +14,7 @@ namespace MVCPracticeProject.Models
         public DbSet<Message> Messagese { get; set; }
         public DbSet<Dish> Dishes { get; set; }
         public DbSet<Order> Orders { get; set; }
+        public DbSet<Flow> Flows { get; set; }
 
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)

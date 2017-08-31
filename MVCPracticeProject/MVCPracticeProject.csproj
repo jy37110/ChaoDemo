@@ -244,10 +244,15 @@
     <Compile Include="Migrations\201704191037364_addUserIdInOrder.Designer.cs">
       <DependentUpon>201704191037364_addUserIdInOrder.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201704201103320_addFlowClass.cs" />
+    <Compile Include="Migrations\201704201103320_addFlowClass.Designer.cs">
+      <DependentUpon>201704201103320_addFlowClass.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AboutModels.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ApplicationDbContext.cs" />
+    <Compile Include="Models\Flow.cs" />
     <Compile Include="Models\FoodOrder\Dish.cs" />
     <Compile Include="Models\FoodOrder\Order.cs" />
     <Compile Include="Models\FoodOrder\OrderItem.cs" />
@@ -280,9 +285,11 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="Properties\PublishProfiles\release.pubxml" />
     <None Include="Scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\FlowStatistics.js" />
     <Content Include="Scripts\FoodOrder.js" />
     <Content Include="Scripts\jquery-3.1.1.js" />
     <Content Include="Scripts\jquery-3.1.1.min.js" />
@@ -299,7 +306,9 @@
     <Content Include="Scripts\Sukudo.js" />
     <Content Include="Scripts\SukudoBoard.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -417,6 +426,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201704191037364_addUserIdInOrder.resx">
       <DependentUpon>201704191037364_addUserIdInOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201704201103320_addFlowClass.resx">
+      <DependentUpon>201704201103320_addFlowClass.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

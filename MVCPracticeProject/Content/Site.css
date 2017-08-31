@@ -49,7 +49,7 @@ textarea {
 }
 
 #leftDiv {
-    width: 67%;
+    width: 760px;
     float: left;
     border: 1px solid grey;
 }
@@ -58,7 +58,7 @@ textarea {
     margin-left: 20px;
     border: 1px solid grey;
     float: left;
-    width: 19%;
+    width: 360px;
     display: inline-block;
     padding: 20px;
     background-color: rgb(240, 250, 250);
@@ -94,18 +94,18 @@ textarea {
 
 .quantity {
     color: green;
-    font-size: 18px;
+    font-size: 17px;
 
 }
 
 .myName {
     padding-left: 10px;
-    font-size: 18px;
+    font-size: 17px;
     color: rgb(120, 120, 120);
 }
 
 .myPrice {
-    font-size: 18px;
+    font-size: 17px;
     color: rgb(60,60,60);
     padding-left: 20px;
     text-align: right;
